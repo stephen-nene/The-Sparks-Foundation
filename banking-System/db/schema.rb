@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_05_085244) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_05_090439) do
+  create_table "transactions", force: :cascade do |t|
+    t.integer "sender_id", null: false
+    t.integer "recipient_id", null: false
+    t.decimal "amount", null: false
+    t.decimal "sender_before_balance", null: false
+    t.decimal "recipient_before_balance", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipient_id"], name: "index_transactions_on_recipient_id"
+    t.index ["sender_id"], name: "index_transactions_on_sender_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -21,4 +33,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_05_085244) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "transactions", "users", column: "recipient_id"
+  add_foreign_key "transactions", "users", column: "sender_id"
 end
