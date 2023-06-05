@@ -1,0 +1,19 @@
+current directory: /home/nene/development/projects/The-Sparks-Foundation/banking-System/nene-bank/vendor/ruby/3.0.0/gems/debug-1.8.0/ext/debug
+/usr/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/nene/development/projects/The-Sparks-Foundation/banking-System/nene-bank/vendor/ruby/3.0.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230605-6232-e7fmcu sitelibdir\=./.gem.20230605-6232-e7fmcu clean
+
+current directory: /home/nene/development/projects/The-Sparks-Foundation/banking-System/nene-bank/vendor/ruby/3.0.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230605-6232-e7fmcu sitelibdir\=./.gem.20230605-6232-e7fmcu
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/nene/development/projects/The-Sparks-Foundation/banking-System/nene-bank/vendor/ruby/3.0.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230605-6232-e7fmcu sitelibdir\=./.gem.20230605-6232-e7fmcu install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20230605-6232-e7fmcu/debug
+
+current directory: /home/nene/development/projects/The-Sparks-Foundation/banking-System/nene-bank/vendor/ruby/3.0.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230605-6232-e7fmcu sitelibdir\=./.gem.20230605-6232-e7fmcu clean

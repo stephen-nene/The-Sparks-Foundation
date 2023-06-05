@@ -1,0 +1,20 @@
+current directory: /home/nene/development/projects/The-Sparks-Foundation/banking-System/nene-bank/vendor/ruby/3.0.0/gems/racc-1.6.2/ext/racc/cparse
+/usr/bin/ruby extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /home/nene/development/projects/The-Sparks-Foundation/banking-System/nene-bank/vendor/ruby/3.0.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230605-6232-m13ujl sitelibdir\=./.gem.20230605-6232-m13ujl clean
+
+current directory: /home/nene/development/projects/The-Sparks-Foundation/banking-System/nene-bank/vendor/ruby/3.0.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230605-6232-m13ujl sitelibdir\=./.gem.20230605-6232-m13ujl
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/nene/development/projects/The-Sparks-Foundation/banking-System/nene-bank/vendor/ruby/3.0.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230605-6232-m13ujl sitelibdir\=./.gem.20230605-6232-m13ujl install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20230605-6232-m13ujl/racc
+
+current directory: /home/nene/development/projects/The-Sparks-Foundation/banking-System/nene-bank/vendor/ruby/3.0.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230605-6232-m13ujl sitelibdir\=./.gem.20230605-6232-m13ujl clean

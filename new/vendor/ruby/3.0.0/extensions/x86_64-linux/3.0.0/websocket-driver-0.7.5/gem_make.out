@@ -1,0 +1,18 @@
+current directory: /home/nene/development/projects/The-Sparks-Foundation/banking-System/nene-bank/vendor/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/usr/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/nene/development/projects/The-Sparks-Foundation/banking-System/nene-bank/vendor/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230605-6232-elf6sb sitelibdir\=./.gem.20230605-6232-elf6sb clean
+
+current directory: /home/nene/development/projects/The-Sparks-Foundation/banking-System/nene-bank/vendor/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230605-6232-elf6sb sitelibdir\=./.gem.20230605-6232-elf6sb
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/nene/development/projects/The-Sparks-Foundation/banking-System/nene-bank/vendor/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230605-6232-elf6sb sitelibdir\=./.gem.20230605-6232-elf6sb install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20230605-6232-elf6sb
+
+current directory: /home/nene/development/projects/The-Sparks-Foundation/banking-System/nene-bank/vendor/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230605-6232-elf6sb sitelibdir\=./.gem.20230605-6232-elf6sb clean
