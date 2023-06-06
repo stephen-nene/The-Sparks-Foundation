@@ -3,3 +3,19 @@
   margin: 0 auto;
   text-align: center;
 }
+.logo{
+  font-weight: bold;
+  font-size: 30px;
+  color: gold;
+}
+.links{
+  font-size: 20px;
+  color: black;
+}
+.links:hover{
+  color: gold;
+}
+/* .active {
+  text-decoration: underline;
+  color: rgb(255, 255, 255); 
+} */
