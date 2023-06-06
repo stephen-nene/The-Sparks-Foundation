@@ -38,11 +38,11 @@ export default function App() {
                 <NavLink className='links' activeClassName='active' to='/transactions'>Transactions</NavLink>
               </MDBNavbarLink>
               </MDBNavbarItem>
-              <MDBNavbarItem>
+              {/* <MDBNavbarItem>
               <MDBNavbarLink>                
                 <NavLink className='links' activeClassName='active' to='/customers'>Customers</NavLink>
               </MDBNavbarLink>
-              </MDBNavbarItem>
+              </MDBNavbarItem> */}
               <MDBNavbarItem>
               <MDBNavbarLink>                
                 <NavLink className='links' activeClassName='active' to='/about'>About</NavLink>
