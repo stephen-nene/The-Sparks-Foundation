@@ -7,9 +7,12 @@ export default  function Customers() {
   return (
     <>
     <Navigation/>
+    <div className="content">
+      <h1>Customers</h1>
+
+    </div>
 
       
-      <h1>Customers</h1>
      
     </>
   )

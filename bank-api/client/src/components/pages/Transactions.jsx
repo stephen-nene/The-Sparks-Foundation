@@ -113,6 +113,8 @@ export default  function Transactions() {
   return (
     <>
       <Navigation />
+      <div className="content">
+
       <h1>Transactions</h1>
   
       <MDBTable align='middle'>
@@ -122,7 +124,7 @@ export default  function Transactions() {
             <th scope='col'>To</th>
             <th scope='col'>Amount</th>
             <th scope='col'>Date</th>
-            <th scope='col'>Actions</th>
+            {/* <th scope='col'>Actions</th> */}
           </tr>
         </MDBTableHead>
         <MDBTableBody>
@@ -130,12 +132,12 @@ export default  function Transactions() {
             <tr key={index}>
               <td>
                 <div className=' align-items-center'>
-                  <img
+                  {/* <img
                     src='https://mdbootstrap.com/img/new/avatars/8.jpg'
                     alt=''
                     style={{ width: '45px', height: '45px' }}
                     className='rounded-circle'
-                  />
+                  /> */}
                   <div className='ms-2'>
                     <p className='fw-bold mb-1'>{transaction.senderName}</p>
                     <p className='text-muted mb-0'>{transaction.senderAccNumber}</p>
@@ -144,12 +146,12 @@ export default  function Transactions() {
               </td>
               <td>
                 <div className=' align-items-center'>
-                  <img
+                  {/* <img
                     src='https://mdbootstrap.com/img/new/avatars/2.jpg'
                     alt=''
                     style={{ width: '45px', height: '45px' }}
                     className='rounded-circle'
-                  />
+                  /> */}
                   <div className='ms-2'>
                     <p className='fw-bold mb-1'>{transaction.recipientName}</p>
                     <p className='text-muted mb-0'>{transaction.recipientAccNumber}</p>
@@ -165,15 +167,16 @@ export default  function Transactions() {
                 <p className='fw-normal mb-2'>{transaction.date}</p>
                 <p className='text-muted mb-0'>{transaction.time}</p>
               </td>
-              <td>
+              {/* <td>
                 <MDBBtn color='link' rounded size='sm'>
                   View
                 </MDBBtn>
-              </td>
+              </td> */}
             </tr>
           ))}
         </MDBTableBody>
       </MDBTable>
+      </div>
     </>
   );
   

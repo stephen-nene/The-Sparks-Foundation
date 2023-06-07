@@ -2,18 +2,43 @@
   margin: 0 auto;
   text-align: center;
 }
+.navigation {
+  background-color: red;
+  width: 100%;
+  position: fixed; /* Fix the navigation bar position */
+  top: 0; /* Position it at the top of the page */
+  z-index: 999; /* Ensure it's on top of other elements */
+}
+.content {
+  margin-top: 70px; /* Adjust the margin to create space below the navigation bar */
+}
 .logo{
   font-weight: bold;
   font-size: 30px;
   color: gold;
 }
+.logo:hover {
+  color: rgb(0, 0, 0);
+  animation: spin 1s linear forwards; /* Adjust the animation duration as needed */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .links{
+  margin-left: 20px; /* Adjust the value as needed */
   font-size: 18px;
   color: black;
 }
 .links:hover{
   color: gold;
 }
+
 
 /* .active {
   text-decoration: underline;
@@ -23,6 +48,8 @@
 .cards {
   padding: 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 13px;
 }

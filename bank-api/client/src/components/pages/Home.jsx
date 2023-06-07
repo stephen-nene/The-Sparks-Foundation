@@ -1,12 +1,24 @@
 import { useState } from 'react';
 import Navigation from '../navigation/Navigation';
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import "bootstrap/dist/js/bootstrap.bundle.min";
 import { MDBBtn } from 'mdb-react-ui-kit';
 import profile from '../../assets/profile.jpg';
+import { message } from 'antd'
+import Send from '../modals/Send'
 
 export default function Home() {
-  const [count, setCount] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const handleSend = (item) => {
+    setSelectedItem(item);
+    setShowModal(true)
+  };
+
+  const handleReceive = (item) => {
+    message.error("Request feature comming soon")
+
+  }
+
   const cardInfo = [
     {
       name: 'John Doe',
@@ -47,30 +59,35 @@ export default function Home() {
   ];
 
   return (
-    <>
+    <div className='home'>
       <Navigation />
-      <div className="search">
-      <form class="d-flex" role="search">
-        <input class="form-control me-4" type="search" placeholder="Search ...." aria-label="Search"/>
-        <button class="btn btn-info" type="submit">Search</button>
-      </form>
-      </div>
+      <div className="content">
 
-      <div className="cards">
-        {cardInfo.map((item, index) => (
-          <div className="card" key={index}>
-            <img src={profile} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h5 className="card-title">Name: {item.name}</h5>
-              <p className="card-text">Acc_no: {item.account_number}</p>
-              <div className="buttons">
-                <a href="#" className="btn btn-success">Send</a>
-                <MDBBtn color='warning' href='#'>Request</MDBBtn>
+
+        <div className="search">
+          <form className="d-flex" role="search">
+            <input className="form-control me-4" type="search" placeholder="Search ...." aria-label="Search" />
+            <button className="btn btn-info" type="submit">Search</button>
+          </form>
+        </div>
+
+        <div className="cards">
+          {cardInfo.map((item, index) => (
+            <div className="card" key={index}>
+              {/* <img src={profile} className="card-img-top" alt="..." /> */}
+              <div className="card-body">
+                <h5 className="card-title">Name: {item.name}</h5>
+                <p className="card-text">Acc_no: {item.account_number}</p>
+                <div className="buttons">
+                  <MDBBtn color="success" onClick={() => handleSend(item)} >Send</MDBBtn>
+                  <MDBBtn color='warning' onClick={() => handleReceive(item)}>Request</MDBBtn>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </> 
+      <Send showModal={showModal} setShowModal={setShowModal} item={selectedItem}/>
+    </div>
   );
 }
