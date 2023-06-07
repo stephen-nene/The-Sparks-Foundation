@@ -9,6 +9,11 @@ export default function Home({users}) {
   const [showModal, setShowModal] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
+  const handleSearch = (e) => {
+    e.preventDefault();
+    message.error("Search feature coming soon");
+  }
+  
   const handleSend = (item) => {
     setSelectedItem(item);
     setShowModal(true)
@@ -27,7 +32,7 @@ export default function Home({users}) {
 
 
         <div className="search">
-          <form className="d-flex" role="search">
+          <form onSubmit={handleSearch} className="d-flex" role="search">
             <input className="form-control me-4" type="search" placeholder="Search ...." aria-label="Search" />
             <button className="btn btn-info" type="submit">Search</button>
           </form>
@@ -35,7 +40,7 @@ export default function Home({users}) {
 
         <div className="cards">
           {users ? (
-            users.map((item, index) => (
+            users.slice(1).map((item, index) => (
               <div className="card" key={index}>
                 {/* <img src={profile} className="card-img-top" alt="..." /> */}
                 <div className="card-body">
@@ -54,7 +59,7 @@ export default function Home({users}) {
           )}
         </div>
       </div>
-      <Send showModal={showModal} setShowModal={setShowModal} item={selectedItem}/>
+      <Send showModal={showModal} setShowModal={setShowModal} sender={users} item={selectedItem}/>
     </div>
   );
 }

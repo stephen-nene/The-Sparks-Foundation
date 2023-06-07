@@ -1,0 +1,72 @@
+.send-modal {
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  .send-modal .modal-header {
+    border: 1px solid #000000;
+    background-color: #147eee;
+    color: #fff;
+    border-bottom: none;
+  }
+  
+  .send-modal .modal-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .send-modal .modal-body {
+    padding: 1rem;
+  }
+  
+  .send-modal .modal-body p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .send-modal input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .send-modal .modal-footer {
+    background-color: #f3f3f3;
+    border-top: none;
+  }
+  
+  .send-modal .modal-buttons {
+    text-align: right;
+  }
+  
+  .send-modal .modal-buttons button {
+    margin-left: 0.5rem;
+  }
+  
+  .send-modal .btn-close {
+    color: #fff;
+    opacity: 0.75;
+  }
+  
+  .send-modal .btn-close:hover {
+    opacity: 1;
+  }
+  
+  .send-modal .btn-close:active {
+    opacity: 0.9;
+  }
+  
+  .transaction-info {
+    background-color: #9c9b9b;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #201e1e;
+    border-radius: 4px;
+  }
+  
+  .transaction-info p {
+    color: rgb(0, 255, 157);
+    margin: 0;
+  }

@@ -24,7 +24,7 @@ function App() {
       fetch('http://127.0.0.1:8342/users')
         .then(response => response.json())
         .then(data => {  
-          setUsers(data.slice(1));
+          setUsers(data);
         })
         .catch(error => {
           message.error('Failed to fetch users');

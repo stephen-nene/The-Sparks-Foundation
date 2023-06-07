@@ -12,7 +12,7 @@ puts "🔐 Creating main user..."
 
 puts "🔐 Seeding users..."
 
-20.times do |n|
+30.times do |n|
   User.create!(
     name: Faker::Name.unique.name,
     email: Faker::Internet.unique.email,
@@ -30,27 +30,27 @@ puts "🎉 User seeding complete!"
 
 puts "💸 Seeding transactions..."
 
-User.all.each do |sender|
-  recipient = User.where.not(id: sender.id).sample
-  amount = 100
+# User.all.each do |sender|
+#   recipient = User.where.not(id: sender.id).sample
+#   amount = 100
 
-  sender_before_balance = sender.account_balance
-  recipient_before_balance = recipient.account_balance
+#   sender_before_balance = sender.account_balance
+#   recipient_before_balance = recipient.account_balance
 
-  sender.update(account_balance: sender_before_balance - amount.to_f)
-  recipient.update(account_balance: recipient_before_balance + amount.to_f)
+#   sender.update(account_balance: sender_before_balance - amount.to_f)
+#   recipient.update(account_balance: recipient_before_balance + amount.to_f)
 
-  Transaction.create!(
-    sender_id: sender.id,
-    recipient_id: recipient.id,
-    amount: amount,
-    sender_before_balance: sender_before_balance,
-    recipient_before_balance: recipient_before_balance
-  )
+#   Transaction.create!(
+#     sender_id: sender.id,
+#     recipient_id: recipient.id,
+#     amount: amount,
+#     sender_before_balance: sender_before_balance,
+#     recipient_before_balance: recipient_before_balance
+#   )
 
   # print "💰 Creating transaction..."
   # sleep(0.005)
   # puts " ✅"
-end
+# end
 
 puts "🎉 Transaction seeding complete!"
