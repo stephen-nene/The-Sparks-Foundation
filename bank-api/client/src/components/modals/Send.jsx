@@ -18,7 +18,9 @@ export default function Send({ showModal, setShowModal, item }) {
           <MDBModalContent>
             <MDBModalHeader>
               <MDBModalTitle>
-                Send money to: {item && (<u>{item.name}</u>)}
+                Sending cash as: Steve Nene<br/>
+                Acc-number: 834283428342<br/>
+                {/* acc-balance: 834283428342                 */}
               </MDBModalTitle>
 
               <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
