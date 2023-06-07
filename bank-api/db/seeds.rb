@@ -2,7 +2,7 @@ require 'faker'
 
 puts "👤 Creating main user..."
 User.create!(
-  name: "steve nene",
+  name: "Stephen Nene",
   email: "stevekid705@gmail.com",
   account_number: 834283428342,
   account_balance: 2000000000000,
