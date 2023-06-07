@@ -48,7 +48,7 @@ export default function Send({ showModal, sender, setShowModal, item }) {
     if (transactionInfo) {
       const timer = setTimeout(() => {
         setTransactionInfo(null);
-      }, 2000);
+      }, 5000);
 
       return () => clearTimeout(timer);
     }
@@ -64,6 +64,7 @@ export default function Send({ showModal, sender, setShowModal, item }) {
                 <MDBModalTitle>
                   Sending cash as: {sender[0].name}<br/>
                   Acc-number: {sender[0].account_number}<br/>
+                  Balance: {sender[0].account_balance}<br/>
                 </MDBModalTitle>
               )}
 

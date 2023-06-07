@@ -42,7 +42,7 @@ export default function Home({users}) {
           {users ? (
             users.slice(1).map((item, index) => (
               <div className="card" key={index}>
-                {/* <img src={profile} className="card-img-top" alt="..." /> */}
+                <img src={profile} className="card-img-top " alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Name: {item.name}</h5>
                   <p className="card-text">Acc_no: {item.account_number}</p>
