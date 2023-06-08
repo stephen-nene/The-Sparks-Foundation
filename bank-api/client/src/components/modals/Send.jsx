@@ -7,8 +7,10 @@ export default function Send({ showModal, sender, setShowModal, item }) {
   const toggleShow = () => setShowModal(!showModal);
   const [amount, setAmount] = useState("");
   const [transactionInfo, setTransactionInfo] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleTransaction = () => {
+    setLoading(true)
     const transactionData = {
       sender_id: sender[0].id,
       recipient_id: item.id,
@@ -37,10 +39,12 @@ export default function Send({ showModal, sender, setShowModal, item }) {
         } else {
           message.error('Failed to complete the transaction');
         }
+        setLoading(false)
       })
       .catch(error => {
         message.error('Failed to complete the transaction');
         console.error('Error:', error);
+        setLoading(false)
       });
   };
 
@@ -89,6 +93,11 @@ export default function Send({ showModal, sender, setShowModal, item }) {
               {transactionInfo && (
                 <div className="transaction-info">
                   <p>Succefully sent {transactionInfo.amount} Ksh to {transactionInfo.recipient.name}</p>
+                </div>
+              )}
+                            {loading && (
+                <div className="transaction-info">
+                  <p>sending </p>
                 </div>
               )}
             </MDBModalBody>

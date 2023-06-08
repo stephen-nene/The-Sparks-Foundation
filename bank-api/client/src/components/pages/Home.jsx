@@ -3,6 +3,7 @@ import Navigation from '../navigation/Navigation';
 import { MDBBtn } from 'mdb-react-ui-kit';
 import profile from '../../assets/profile.jpg';
 import { message } from 'antd'
+import  {Dna} from 'react-loader-spinner'
 import Send from '../modals/Send'
 
 export default function Home({users}) {
@@ -30,6 +31,8 @@ export default function Home({users}) {
       <Navigation />
       <div className="content">
 
+                    
+
 
         <div className="search">
           <form onSubmit={handleSearch} className="d-flex" role="search">
@@ -38,11 +41,14 @@ export default function Home({users}) {
           </form>
         </div>
 
+      {/* <MDBBtn color="success" onClick={() => handleSend()}>fetch-users</MDBBtn> */}
+
         <div className="cards">
           {users ? (
             users.slice(1).map((item, index) => (
               <div className="card" key={index}>
-                <img src={profile} className="card-img-top " alt="..." />
+
+                <img src={item.profile} alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Name: {item.name}</h5>
                   <p className="card-text">Acc_no: {item.account_number}</p>
@@ -55,7 +61,16 @@ export default function Home({users}) {
               </div>
             ))
           ) : (
+            <><Dna
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="dna-loading"
+            wrapperStyle={{}}
+            wrapperClass="dna-wrapper"
+          /><br/>
             <p>Loading users...</p>
+            </>
           )}
         </div>
       </div>

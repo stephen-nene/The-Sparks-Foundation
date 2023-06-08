@@ -37,7 +37,7 @@ message.info("feature comming soon")
                     <td>
                       <div className=' align-items-center'>
                         <img
-                    src='https://mdbootstrap.com/img/new/avatars/8.jpg'
+                    src={transaction.sender.profile}
                     alt=''
                     style={{ width: '45px', height: '45px' }}
                     className='rounded-circle'
@@ -51,7 +51,7 @@ message.info("feature comming soon")
                     <td>
                       <div className=' align-items-center'>
                         <img
-                    src='https://mdbootstrap.com/img/new/avatars/2.jpg'
+                    src={transaction.recipient.profile}
                     alt=''
                     style={{ width: '45px', height: '45px' }}
                     className='rounded-circle'
