@@ -19,7 +19,7 @@ export default function Send({ showModal, sender, setShowModal, item }) {
       recipient_before_balance: item.account_balance,
     };
 
-    fetch('https://nene-bank.onrender.com/transactions', {
+    fetch('http://127.0.0.1:8342/transactions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     if (transactions === null) {
-      fetch('https://nene-bank.onrender.com/transactions')
+      fetch('http://127.0.0.1:8342/transactions')
         .then(response => response.json())
         .then(data => {  
           setTransactions(data);
@@ -21,7 +21,7 @@ function App() {
           message.error('Failed to fetch transactions');
         });
   
-      fetch('https://nene-bank.onrender.com/users')
+      fetch('http://127.0.0.1:8342/users')
         .then(response => response.json())
         .then(data => {  
           setUsers(data);
