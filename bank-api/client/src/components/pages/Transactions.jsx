@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
 import Navigation from '../navigation/Navigation'
 import { message } from 'antd'
+import  {Dna} from 'react-loader-spinner'
 import { FcRightUp, FcRightDown } from 'react-icons/fc'
 import { MDBBadge, MDBBtn, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 
 
-export default function Transactions({transactions}) {
+export default function Transactions({transactions, fetchTransactions, fetching}) {
 
 
   const  handleOpenTransaction = ()=>{
@@ -20,8 +21,8 @@ message.info("feature comming soon")
 
         <h1>Transactions</h1>
         {transactions ? (
-
-            <MDBTable align='middle'>
+          
+          <MDBTable align='middle'>
               <MDBTableHead>
                 <tr>
                   <th scope='col'>From</th>
@@ -82,7 +83,21 @@ message.info("feature comming soon")
             </MDBTable>
 
         ) : (
-          <p>Loading Transactions...</p>
+          <div className='fetching'>
+          {fetching ? (
+
+            <Dna
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="dna-loading"
+            wrapperStyle={{}}
+            wrapperClass="dna-wrapper"
+          />
+            ):(
+            <MDBBtn color="success" onClick={fetchTransactions}>fetch-Transactions</MDBBtn>
+          )}
+          </div>
         )}
       </div>
     </>

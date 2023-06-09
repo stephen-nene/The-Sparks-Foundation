@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react';
 import Navigation from '../navigation/Navigation';
-import { MDBBtn } from 'mdb-react-ui-kit';
 import profile from '../../assets/profile.jpg';
-import { message } from 'antd'
+import { useState, useEffect } from 'react';
+import { MDBBtn } from 'mdb-react-ui-kit';
 import  {Dna} from 'react-loader-spinner'
 import Send from '../modals/Send'
+import { message } from 'antd'
 
-export default function Home({users}) {
+export default function Home({users,fetching, fetchUsers}) {
   const [showModal, setShowModal] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
@@ -41,7 +41,6 @@ export default function Home({users}) {
           </form>
         </div>
 
-      {/* <MDBBtn color="success" onClick={() => handleSend()}>fetch-users</MDBBtn> */}
 
         <div className="cards">
           {users ? (
@@ -61,16 +60,23 @@ export default function Home({users}) {
               </div>
             ))
           ) : (
-            <><Dna
-            visible={true}
-            height="80"
-            width="80"
-            ariaLabel="dna-loading"
-            wrapperStyle={{}}
-            wrapperClass="dna-wrapper"
-          /><br/>
-            <p>Loading users...</p>
-            </>
+            <div className='fetching'>
+            {fetching ? (
+
+              <Dna
+              visible={true}
+              height="80"
+              width="80"
+              ariaLabel="dna-loading"
+              wrapperStyle={{}}
+              wrapperClass="dna-wrapper"
+            />
+              ):(
+              <MDBBtn color="success" onClick={fetchUsers}>fetch-users</MDBBtn>
+            )}
+
+
+            </div>
           )}
         </div>
       </div>

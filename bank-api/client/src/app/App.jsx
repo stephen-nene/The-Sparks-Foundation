@@ -8,37 +8,42 @@ import {message} from 'antd'
 
 function App() {
   const [users, setUsers] = useState(null)
+  const [fetching,setFetching] = useState(false)
   const [transactions, setTransactions] = useState(null)
 
-  useEffect(() => {
-    if (transactions === null) {
-      fetch('http://127.0.0.1:8342/transactions')
-        .then(response => response.json())
-        .then(data => {  
-          setTransactions(data);
-        })
-        .catch(error => {
-          message.error('Failed to fetch transactions');
-        });
+  const handleFetchUsers = () => {
+    setFetching(true);
+    fetch('http://127.0.0.1:8342/users')
+      .then((response) => response.json())
+      .then((data) => {
+        setUsers(data);
+        setFetching(false); // Set fetching to false after successful fetch
+      })
+      .catch((error) => {
+        message.error('Failed to fetch users');
+        setFetching(false); // Set fetching to false after fetch error
+      });
+  };
   
-      fetch('http://127.0.0.1:8342/users')
-        .then(response => response.json())
-        .then(data => {  
-          setUsers(data);
-          // console.log(data)
-        })
-        .catch(error => {
-          message.error('Failed to fetch users');
-        });
-    }
-  }, []);
+  const handleFetchTransactions = () => {
+    setFetching(true);
+    fetch('http://127.0.0.1:8342/transactions')
+      .then((response) => response.json())
+      .then((data) => {
+        setTransactions(data);
+        setFetching(false); // Set fetching to false after successful fetch
+      })
+      .catch((error) => {
+        message.error('Failed to fetch transactions');
+        setFetching(false); // Set fetching to false after fetch error
+      });
+  };
   
-
 
   return (
     <Routes>
-      <Route path='/' element={<Home users={users} />} />
-      <Route path='/transactions' element={<Transactions transactions={transactions} />} />
+      <Route path='/' element={<Home fetching={fetching} fetchUsers={handleFetchUsers} users={users} />} />
+      <Route path='/transactions' element={<Transactions fetching={fetching} fetchTransactions={handleFetchTransactions} transactions={transactions} />} />
       <Route path='/about' element={<About />} />
     </Routes>
     

@@ -1,7 +1,8 @@
+import { MDBBtn, MDBModal, MDBModalDialog, MDBModalContent, MDBModalHeader, MDBModalTitle, MDBModalBody, MDBModalFooter } from 'mdb-react-ui-kit';
 import React, { useState, useEffect } from 'react';
+import { Dna } from 'react-loader-spinner'
 import { message } from 'antd';
 import './send.css';
-import { MDBBtn, MDBModal, MDBModalDialog, MDBModalContent, MDBModalHeader, MDBModalTitle, MDBModalBody, MDBModalFooter } from 'mdb-react-ui-kit';
 
 export default function Send({ showModal, sender, setShowModal, item }) {
   const toggleShow = () => setShowModal(!showModal);
@@ -66,9 +67,9 @@ export default function Send({ showModal, sender, setShowModal, item }) {
             <MDBModalHeader>
               {sender && (
                 <MDBModalTitle>
-                  Sending cash as: {sender[0].name}<br/>
-                  Acc-number: {sender[0].account_number}<br/>
-                  Balance: {sender[0].account_balance}<br/>
+                  Sending cash as: {sender[0].name}<br />
+                  Acc-number: {sender[0].account_number}<br />
+                  Balance: {sender[0].account_balance}<br />
                 </MDBModalTitle>
               )}
 
@@ -83,11 +84,11 @@ export default function Send({ showModal, sender, setShowModal, item }) {
                   <p>Account_number: <b>{item.account_number}</b></p>
                 </React.Fragment>
               )}
-              <input 
-                type="number" 
-                placeholder='Enter amount...' 
-                value={amount} 
-                onChange={(e) => setAmount(e.target.value)} 
+              <input
+                type="number"
+                placeholder='Enter amount...'
+                value={amount}
+                onChange={(e) => setAmount(e.target.value)}
               />
 
               {transactionInfo && (
@@ -95,16 +96,36 @@ export default function Send({ showModal, sender, setShowModal, item }) {
                   <p>Succefully sent {transactionInfo.amount} Ksh to {transactionInfo.recipient.name}</p>
                 </div>
               )}
-                            {loading && (
+              {/* {loading && (
                 <div className="transaction-info">
                   <p>sending </p>
                 </div>
-              )}
+              )} */}
             </MDBModalBody>
 
             <MDBModalFooter>
-              <div className="modal-buttons">
-                <MDBBtn onClick={handleTransaction} color='success'>Send</MDBBtn>
+              <div className='fetching'>
+                {loading ? (
+
+<div className="modal-buttons">
+<MDBBtn onClick={handleTransaction} color='success'><Dna
+                    visible={true}
+                    height="80"
+                    width="80"
+                    ariaLabel="dna-loading"
+                    wrapperStyle={{}}
+                    wrapperClass="dna-wrapper"
+                  /></MDBBtn>
+</div>
+
+                  
+                ) : (
+                  <div className="modal-buttons">
+                    <MDBBtn onClick={handleTransaction} color='success'>Send</MDBBtn>
+                  </div>
+                )}
+
+
               </div>
             </MDBModalFooter>
           </MDBModalContent>
