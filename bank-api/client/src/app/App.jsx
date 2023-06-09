@@ -13,7 +13,7 @@ function App() {
 
   const handleFetchUsers = () => {
     setFetching(true);
-    fetch('http://127.0.0.1:8342/users')
+    fetch('https://nene-bank.onrender.com/users')
       .then((response) => response.json())
       .then((data) => {
         setUsers(data);
@@ -27,7 +27,7 @@ function App() {
   
   const handleFetchTransactions = () => {
     setFetching(true);
-    fetch('http://127.0.0.1:8342/transactions')
+    fetch('https://nene-bank.onrender.com/transactions')
       .then((response) => response.json())
       .then((data) => {
         setTransactions(data);
