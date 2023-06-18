@@ -25,7 +25,7 @@ function App() {
           path="/"
           element={<PublicPage />} />
       <Route
-        path="/sign-in/*"
+        path="/sign-in"
         element={
           <div className="sign-page">
             <SignIn routing="path" path="/sign-in" />
@@ -38,7 +38,7 @@ function App() {
         }
       />
       <Route
-        path="/sign-up/*"
+        path="/sign-up"
         element={
           <div className="sign-page">
             <SignUp routing="path" path="/sign-up" />
