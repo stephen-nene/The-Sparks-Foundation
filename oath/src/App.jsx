@@ -27,14 +27,15 @@ function App() {
       <Route
         path="/sign-in"
         element={
-          <div className="sign-page">
-            <SignIn routing="path" path="/sign-in" />
-            <div className="button-container">
-              <Button className="home-button" href="/">
-                Public
-              </Button>
-            </div>
-          </div>
+          <PublicPage/>
+          // <div className="sign-page">
+          //   <SignIn routing="path" path="/sign-in" />
+          //   <div className="button-container">
+          //     <Button className="home-button" href="/">
+          //       Public
+          //     </Button>
+          //   </div>
+          // </div>
         }
       />
       <Route
