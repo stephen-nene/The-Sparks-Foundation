@@ -1,0 +1,59 @@
+
+.sign-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  text-align: center;
+}
+
+.button-container {
+  margin-top: 2rem;
+}
+
+.home-button {
+  background-color: #1890ff;
+  color: #fff;
+  border: none;
+}
+
+.cl-internal-b3fm6y {
+  display: none;
+}
+
+.public {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sign-in-btn {
+  background-color: #1890ff;
+  color: #fff;
+  border: none;
+}
+
+.sign-up-btn {
+  background-color: #f5222d;
+  color: #fff;
+  border: none;
+}
+
+a {
+  color: #1890ff;
+}
