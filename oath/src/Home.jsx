@@ -7,7 +7,9 @@ export default function Home() {
 
         <div>
             <UserButton />
-            Hello you are signed in
+            <p>
+                Hello you are signed in
+            </p>
         </div>
     )
 }
