@@ -1,59 +1,82 @@
-
-.sign-page {
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+#root {
+  /* background-color: aquamarine; */
+  background: url(./assets/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 50vh;
+  align-items: center;
+  height: 100vh; 
+}
+
+.whole {
+  height: 50rem;
+  width: 99%;
+  max-width: 800px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  background-image: url(./assets/bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.social-buttons {
   text-align: center;
 }
 
-.button-container {
-  margin-top: 2rem;
+.social-buttons p {
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.home-button {
-  background-color: #1890ff;
+.social-buttons .btn {
   color: #fff;
-  border: none;
+  transition: background-color 0.3s ease;
 }
 
-.cl-internal-b3fm6y {
-  display: none;
+.social-buttons .btn:hover {
+  background-color: #1266f1;
+
 }
 
-.public {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 50vh;
-  text-align: center;
+.social-buttons .btn.facebook {
+  color: #1877f2;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+.social-buttons .btn.facebook:hover {
+  color: #ffffff;
+  background-color: #1877f2;
 }
 
-.btn {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
+.social-buttons .btn.twitter {
+  color: #1da1f2;
 }
 
-.sign-in-btn {
-  background-color: #1890ff;
-  color: #fff;
-  border: none;
+.social-buttons .btn.twitter:hover {
+  color: #ffffff;
+  background-color: #1da1f2;
 }
 
-.sign-up-btn {
-  background-color: #f5222d;
-  color: #fff;
-  border: none;
+.social-buttons .btn.google {
+  color: #ea4335;
 }
 
-a {
-  color: #1890ff;
+.social-buttons .btn.google:hover {
+  color: #ffffff;
+  background-color: #ea4335;
+}
+
+.social-buttons .btn.github {
+  color: #333;
+}
+
+.social-buttons .btn.github:hover {
+  background-color: #333;
+  color: #ffffff;
 }
