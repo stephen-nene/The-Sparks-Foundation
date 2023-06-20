@@ -5,7 +5,10 @@ import { signInWithPopup } from 'firebase/auth';
 import { auth, provider2, provider3 } from './firebase-config';
 import './App.css';
 
-
+const handleSignout = () => {
+  setUser(null)
+  message.success("logged out successfully")
+}
 
 function App() {
   const [loading, setLoading] = React.useState(false);
@@ -17,7 +20,7 @@ function App() {
 
   const handleGoogle = () => {
     signInWithPopup(auth, provider2)
-      .then((result) => {        
+      .then((result) => {
         setUser(result.user)
         message.success('Google login successful');
       })
@@ -39,15 +42,9 @@ function App() {
       })
   };
 
-  const handleSignout = () => {
-    setUser(null)
-    message.success("logged out successfully")
-  }
-
   return (
     <>
       {user ? (
-        <>
         <div className="profile">
           <div className="photo">
             <img src={user.photoURL} alt="dp" referrerPolicy="no-referrer" />
@@ -58,9 +55,7 @@ function App() {
             Sign-Out
           </MDBBtn>
         </div>
-        </>
       ) : (
-        <>
         <div className="whole">
           <MDBContainer fluid className='p-4 background-radial-gradient overflow-hidden'>
             <MDBRow>
@@ -112,8 +107,6 @@ function App() {
             </MDBRow>
           </MDBContainer>
         </div>
-        </>
-
       )}
     </>
   );
