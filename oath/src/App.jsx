@@ -9,7 +9,7 @@ export default  function App() {
 
   return (
     <>
-    <div className="whole">
+    <div className="">
     <Home/>
     </div>
 

@@ -3,7 +3,7 @@ body {
 }
 #root {
   /* background-color: aquamarine; */
-  background: url(./assets/bg.jpg);
+  background: url(./assets/2.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,4 +79,34 @@ body {
 .social-buttons .btn.github:hover {
   background-color: #333;
   color: #ffffff;
+}
+.profile {
+  border: 2px solid #ddd; /* Add a border with a 2px width and a color of your choice */
+  background-color: #f7f7f7; /* Set a background color that shows the content well */
+  padding: 20px; /* Add padding to create some space around the content */
+  text-align: center; /* Center align the text within the profile section */
+}
+
+.profile h2 {
+  margin-bottom: 10px; /* Add a small margin below the heading */
+}
+
+.profile .photo {
+  margin-top: 20px; /* Add a margin on top of the photo */
+}
+
+.profile .photo img {
+  width: 100px; /* Set the width of the photo to your desired size */
+  height: auto; /* Maintain the aspect ratio of the photo */
+  border-radius: 50%; /* Apply a circular border radius to the photo */
+  object-fit: cover; /* Make sure the photo fills the available space without stretching */
+}
+
+.profile .sign-up-btn {
+  background-color: rgb(151, 47, 47);
+  margin-top: 20px; /* Add a margin on top of the sign-out button */
+}
+.profile .sign-up-btn:hover{
+  background-color: rgb(255, 0, 0);
+  color: black;
 }

@@ -49,11 +49,11 @@ function App() {
       {user ? (
         <>
         <div className="profile">
-          <h2>Welcome {user.displayName}</h2>
-          <p>{user.email}</p>
           <div className="photo">
             <img src={user.photoURL} alt="dp" referrerPolicy="no-referrer" />
           </div>
+          <h2>Welcome {user.displayName}</h2>
+          <p>Email: {user.email}</p>
           <MDBBtn className="sign-up-btn" onClick={handleSignout}>
             Sign-Out
           </MDBBtn>
@@ -61,7 +61,7 @@ function App() {
         </>
       ) : (
         <>
-
+        <div className="whole">
           <MDBContainer fluid className='p-4 background-radial-gradient overflow-hidden'>
             <MDBRow>
               <MDBCol md='6' className='text-center text-md-start d-flex flex-column justify-content-center'>
@@ -111,6 +111,7 @@ function App() {
               </MDBCol>
             </MDBRow>
           </MDBContainer>
+        </div>
         </>
 
       )}
